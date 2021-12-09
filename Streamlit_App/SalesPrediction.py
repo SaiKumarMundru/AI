@@ -47,7 +47,7 @@ def main():
         Unemployment = st.number_input('Unemployment', help="Unemployment")
     predict= st.button("Predict")
     if predict:
-        model = pickle.load(open('modelradomforest32.pkl', 'rb'))
+        model = pickle.load(open('modelradomforest1.pkl', 'rb'))
         prediction= model.predict([[Store,Dept, Year,Month,Day,IsHoliday,Temperature,Fuel_Price,MarkDown1,MarkDown2,MarkDown3,MarkDown4,MarkDown5,CPI,Unemployment]])
         st.header('The Predicted Weekly Sales is {}'.format(prediction*100000))
     
