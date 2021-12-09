@@ -49,7 +49,7 @@ def main():
     if predict:
         model = pickle.load(open('modelradomforest1.pkl', 'rb'))
         prediction= model.predict([[Store,Dept, Year,Month,Day,IsHoliday,Temperature,Fuel_Price,MarkDown1,MarkDown2,MarkDown3,MarkDown4,MarkDown5,CPI,Unemployment]])
-        st.header('The Predicted Weekly Sales is {}'.format(prediction*100000))
+        st.header('The Predicted Weekly Sales is {}'.format(prediction*1000))
     
 if __name__=='__main__':
     main()
